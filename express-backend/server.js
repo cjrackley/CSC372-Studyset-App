@@ -51,6 +51,12 @@ app.use('/users', userRoutes);
 app.use('/auth', require('./auth/authRoute'));
 app.use("/weather", weatherRoutes);
 
+app.use(express.static(Path2D.join(__dirname, '../react-frontend-client/dist')));
+
+app.get('/{*splat}', (req, res) => {
+  res.sendFile(path.join(__dirname, '../react-frontend-client/dist', 'index.html'));
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
     console.log("Server listening on port: " + PORT + "!");
