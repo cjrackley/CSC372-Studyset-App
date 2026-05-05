@@ -1,39 +1,13 @@
-# Using Google OAuth
-- Clone the repo.
-- Create OAuth 2.0 Client credentials at console.cloud.google.com.
-  - Authorized JavaScript origins (where the login request will be originating from, in this case our React client):
-  ```
-  http://localhost:5173
-  ```
-  - Authorized redirect URIs (the subroutine to take users through authentication, in this case our auth routes in the Express backend):
-  ```
-  http://localhost:3000/auth/google/callback
-  ```
+#Setup
 
-## Backend Setup
-- Create a new .env file for the express server.
-- Add the ClientID and Client Secret from your Google App credentials.
-- Add your Neon connection string.
-- Add a CLIENT_BASE_URL property to be used for CORS for the frontend.
-```
-DATABASE_URL='NEON STRING'
-clientID='clientIDFromGoogleCloud'
-clientSecret='clientSecretFromGoogleCloud'
-CLIENT_BASE_URL='http://localhost:5173'
-```
-- Run `npm install`
-- Run `node server.js` and ensure the Express app is running at http://localhost:3000/
+## Run npm install in express-backend directory
+## Run node server.js
 
-## Frontend Setup
-- Navigate to the react-client subfolder
-```
-cd react-client
-```
-- Add a new .env file for the React client.
-- Add a VITE_BACKEND_API_BASE_URL property.
-```
-VITE_API_URL =http://localhost:3000
-```
-- Run `npm install`.
-- Run `npm run dev`
-- Access the app at http://localhost:5173
+## Run npm install in react-frontend-client directory
+## Run npm run dev
+
+#NO URL
+
+#Reflection
+
+I chose to use React and express together as it made the most sense to me. Having the client side and server side seperated seemed like the best way to go about it for me. Within the backend, I set my routes up by using models, controllers and route files. Within my database, I have a table for users, notesets(studysets) and notes. Notes are dependent on notesets, and notesets on users. One of my biggest challenges was updating my project for user authentication, as this completely broke my schema and how the server went about finding the data. Another big challenge was styling the website, I went through a lot of forumns and videos on website formatting to get a user friendly vibe. Overall, I learned a lot about how React communicates with the Server all while keeping track of data from a database. I wanted to add testing features like matching or multiple choice, I thought about changing the id for the studysets and notes just because they're serialized and will just show up as a number which is easy for other people to possible access other user's data. 
