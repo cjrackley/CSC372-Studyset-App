@@ -1,10 +1,10 @@
 #Setup
 
-## Run npm install in express-backend directory
-## Run node server.js
+ Run npm install in express-backend directory
+ Run node server.js
 
-## Run npm install in react-frontend-client directory
-## Run npm run dev
+ Run npm install in react-frontend-client directory
+ Run npm run dev
 
 #NO URL
 
