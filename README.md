@@ -1,40 +1,11 @@
-# sp26-express-routes
-Demo node/express with routes and a React frontend client.
+# Setup
 
+Run npm install in express-backend directory Run node server.js
 
-## Getting Started
-1. Clone the repository and navigate to the project directory.
-Add environment variables for the backend and frontend:
-    - Create a `.env` file in the `express-backend` directory with the following content:
-      ```
-      DATABASE_URL='YOUR_DATABASE_URL_HERE'
-      CLIENT_BASE_URL='http://localhost:5173'
-      clientID='client-id-from-google-console'
-      clientSecret='client-secret-from google-console'
-      ```
-    - Create a `.env` file in the `react-frontend-client` directory with the following content:
-      ```
-      VITE_API_URL=http://localhost:3000
-      ```
-2. Install dependencies for both the backend and frontend:
-    - For the backend:
-      ```bash
-      cd express-backend
-      npm install
-      ```
-    - For the frontend:
-      ```bash
-      cd react-frontend-client
-      npm install
-      ```
-3. Start the backend server:
-    ```bash
-    cd express-backend
-    node server.js
-    ```
-4. In a separate terminal, start the frontend development server:
-    ```bash
-    cd react-frontend-client
-    npm run dev
-    ```
-5. Open your browser and navigate to `http://localhost:5173` to view the application.
+Run npm install in react-frontend-client directory Run npm run dev
+
+# NO URL
+
+# Reflection
+
+I chose to use React and express together as it made the most sense to me. Having the client side and server side seperated seemed like the best way to go about it for me. Within the backend, I set my routes up by using models, controllers and route files. Within my database, I have a table for users, notesets(studysets) and notes. Notes are dependent on notesets, and notesets on users. One of my biggest challenges was updating my project for user authentication, as this completely broke my schema and how the server went about finding the data. Another big challenge was styling the website, I went through a lot of forumns and videos on website formatting to get a user friendly vibe. Overall, I learned a lot about how React communicates with the Server all while keeping track of data from a database. I wanted to add testing features like matching or multiple choice, I thought about changing the id for the studysets and notes just because they're serialized and will just show up as a number which is easy for other people to possible access other user's data.
